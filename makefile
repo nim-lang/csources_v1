@@ -4,7 +4,7 @@
 
 CC ?= gcc
 CFLAGS += -Ic_code -w -O3 -fno-strict-aliasing
-LDFLAGS += 
+LDFLAGS +=
 binDir = bin
 
 koch := $(shell sh -c 'test -s ../koch.nim && echo "yes"')
@@ -132,6 +132,9 @@ ifneq (,$(filter $(ucpu), mips mips64))
   ifeq (,$(filter $(mycpu), mips mipsel mips64 mips64el))
     $(error unknown MIPS target: $(mycpu))
   endif
+endif
+ifeq ($(ucpu),arm64)
+  mycpu = arm64
 endif
 ifeq ($(ucpu),arm)
   mycpu = arm
