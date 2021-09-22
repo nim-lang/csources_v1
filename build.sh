@@ -82,7 +82,7 @@ case $uos in
     myos="dragonfly"
     LINK_FLAGS="$LINK_FLAGS -lm"
     ;;
-  *freebsd* )
+  *freebsd* | *crossos* )
     myos="freebsd"
     CC="clang"
     LINK_FLAGS="$LINK_FLAGS -lm"

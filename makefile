@@ -35,6 +35,11 @@ ifeq ($(uos),freebsd)
   CC = clang
   LDFLAGS += -lm
 endif
+ifeq ($(uos),crossos)
+  myos= freebsd
+  CC = clang
+  LDFLAGS += -lm
+endif
 ifeq ($(uos),openbsd)
   myos = openbsd
   LDFLAGS += -lm
