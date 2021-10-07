@@ -68,6 +68,11 @@ ifeq ($(uos),sun)
   myos = solaris
   LDFLAGS += -ldl -lm -lsocket -lnsl
 endif
+ifeq ($(uos),sunos)
+  myos = solaris
+  LDFLAGS += -ldl -lm -lsocket -lnsl
+  isOpenIndiana = true
+endif
 ifeq ($(uos),haiku)
   myos = haiku
 endif
@@ -81,6 +86,9 @@ endif
 
 ifeq ($(ucpu),i386)
   mycpu = i386
+  ifeq ($(isOpenIndiana),true)
+    mycpu = amd64
+  endif
 endif
 ifeq ($(ucpu),i486)
   mycpu = i386
@@ -96,6 +104,9 @@ ifeq ($(ucpu),bepc)
 endif
 ifeq ($(ucpu),i86pc)
   mycpu = i386
+  ifeq ($(isOpenIndiana),true)
+    mycpu = amd64
+  endif
 endif
 ifeq ($(ucpu),amd64)
   mycpu = amd64
