@@ -93,7 +93,7 @@ tyEnum_TEndian__bQ3yFYQJojZPNYsZnS7Zjg Field2;
 NI Field3;
 NI Field4;
 };
-typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[26];
+typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[27];
 typedef NU8 tyEnum_TSystemCPU__XYDt7D1G3qcClFyZy1Ky9ag;
 typedef NU8 tyEnum_TSystemOS__s7Mlr1t66SUqP6BKJMXLaQ;
 struct tyObject_Target__9abOl5DLX8suLujOaHSvGzw {

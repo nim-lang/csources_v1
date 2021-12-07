@@ -111,7 +111,7 @@ tyEnum_TEndian__bQ3yFYQJojZPNYsZnS7Zjg Field2;
 NI Field3;
 NI Field4;
 };
-typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[26];
+typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[27];
 struct tyObject_Cell__1zcF9cV8XIAtbN8h5HRUB8g {
 NI refcount;
 TNimType* typ;
@@ -746,6 +746,7 @@ STRING_LITERAL(TM__LEa0rTUoGHqcCT74IoUuTg_90, "riscv32", 7);
 STRING_LITERAL(TM__LEa0rTUoGHqcCT74IoUuTg_91, "riscv64", 7);
 STRING_LITERAL(TM__LEa0rTUoGHqcCT74IoUuTg_92, "esp", 3);
 STRING_LITERAL(TM__LEa0rTUoGHqcCT74IoUuTg_93, "wasm32", 6);
+STRING_LITERAL(TM__LEa0rTUoGHqcCT74IoUuTg_94, "loongarch64", 11);
 NIM_CONST tyArray__hsHGImvImZtnKKlj0Ycm2Q CPU__uYXopJX8pM87pQDCtmgWfQ = {{((NimStringDesc*) &TM__LEa0rTUoGHqcCT74IoUuTg_68),
 ((NI) 32),
 ((tyEnum_TEndian__bQ3yFYQJojZPNYsZnS7Zjg) 0),
@@ -901,6 +902,12 @@ NIM_CONST tyArray__hsHGImvImZtnKKlj0Ycm2Q CPU__uYXopJX8pM87pQDCtmgWfQ = {{((NimS
 ((tyEnum_TEndian__bQ3yFYQJojZPNYsZnS7Zjg) 0),
 ((NI) 64),
 ((NI) 32)}
+,
+{((NimStringDesc*) &TM__LEa0rTUoGHqcCT74IoUuTg_94),
+((NI) 64),
+((tyEnum_TEndian__bQ3yFYQJojZPNYsZnS7Zjg) 0),
+((NI) 64),
+((NI) 64)}
 }
 ;
 N_LIB_PRIVATE N_NIMCALL(tyEnum_TSystemOS__s7Mlr1t66SUqP6BKJMXLaQ, nameToOS__iaKZ3jKfqDIiIRvch1tYwg)(NimStringDesc* name) {	tyEnum_TSystemOS__s7Mlr1t66SUqP6BKJMXLaQ result;
@@ -940,7 +947,7 @@ N_LIB_PRIVATE N_NIMCALL(tyEnum_TSystemCPU__XYDt7D1G3qcClFyZy1Ky9ag, nameToCPU__x
 		res = ((NI) 1);
 		{
 			while (1) {
-				if (!(res <= ((NI) 26))) goto LA3;
+                                if (!(res <= ((NI) 27))) goto LA3;
 				i = ((tyEnum_TSystemCPU__XYDt7D1G3qcClFyZy1Ky9ag) (res));
 				{
 					NI T6_;
@@ -1039,9 +1046,9 @@ N_LIB_PRIVATE N_NIMCALL(tySequence__sM4lkSb7zS6F7OVMvW9cffQ*, listCPUnames__WnkS
 }
 N_LIB_PRIVATE N_NIMCALL(void, compiler_platformDatInit000)(void) {
 static TNimNode* TM__LEa0rTUoGHqcCT74IoUuTg_2_8[8];
-static TNimNode* TM__LEa0rTUoGHqcCT74IoUuTg_3_27[27];
+static TNimNode* TM__LEa0rTUoGHqcCT74IoUuTg_3_28[28];
 NI TM__LEa0rTUoGHqcCT74IoUuTg_5;
-static char* NIM_CONST TM__LEa0rTUoGHqcCT74IoUuTg_4[27] = {
+static char* NIM_CONST TM__LEa0rTUoGHqcCT74IoUuTg_4[28] = {
 "cpuNone", 
 "cpuI386", 
 "cpuM68k", 
@@ -1068,7 +1075,8 @@ static char* NIM_CONST TM__LEa0rTUoGHqcCT74IoUuTg_4[27] = {
 "cpuRiscV32", 
 "cpuRiscV64", 
 "cpuEsp", 
-"cpuWasm32"};
+"cpuWasm32",
+"cpuLoongArch64"};
 static TNimNode* TM__LEa0rTUoGHqcCT74IoUuTg_6_32[32];
 NI TM__LEa0rTUoGHqcCT74IoUuTg_8;
 static char* NIM_CONST TM__LEa0rTUoGHqcCT74IoUuTg_7[32] = {
@@ -1104,7 +1112,7 @@ static char* NIM_CONST TM__LEa0rTUoGHqcCT74IoUuTg_7[32] = {
 "osNintendoSwitch", 
 "osFreeRTOS", 
 "osAny"};
-static TNimNode TM__LEa0rTUoGHqcCT74IoUuTg_0[70];
+static TNimNode TM__LEa0rTUoGHqcCT74IoUuTg_0[71];
 NTI__9abOl5DLX8suLujOaHSvGzw_.size = sizeof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw);
 NTI__9abOl5DLX8suLujOaHSvGzw_.kind = 18;
 NTI__9abOl5DLX8suLujOaHSvGzw_.base = 0;
@@ -1114,65 +1122,65 @@ NTI__XYDt7D1G3qcClFyZy1Ky9ag_.size = sizeof(tyEnum_TSystemCPU__XYDt7D1G3qcClFyZy
 NTI__XYDt7D1G3qcClFyZy1Ky9ag_.kind = 14;
 NTI__XYDt7D1G3qcClFyZy1Ky9ag_.base = 0;
 NTI__XYDt7D1G3qcClFyZy1Ky9ag_.flags = 3;
-for (TM__LEa0rTUoGHqcCT74IoUuTg_5 = 0; TM__LEa0rTUoGHqcCT74IoUuTg_5 < 27; TM__LEa0rTUoGHqcCT74IoUuTg_5++) {
+for (TM__LEa0rTUoGHqcCT74IoUuTg_5 = 0; TM__LEa0rTUoGHqcCT74IoUuTg_5 < 28; TM__LEa0rTUoGHqcCT74IoUuTg_5++) {
 TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_5+2].kind = 1;
 TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_5+2].offset = TM__LEa0rTUoGHqcCT74IoUuTg_5;
 TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_5+2].name = TM__LEa0rTUoGHqcCT74IoUuTg_4[TM__LEa0rTUoGHqcCT74IoUuTg_5];
-TM__LEa0rTUoGHqcCT74IoUuTg_3_27[TM__LEa0rTUoGHqcCT74IoUuTg_5] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_5+2];
+TM__LEa0rTUoGHqcCT74IoUuTg_3_28[TM__LEa0rTUoGHqcCT74IoUuTg_5] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_5+2];
 }
-TM__LEa0rTUoGHqcCT74IoUuTg_0[29].len = 27; TM__LEa0rTUoGHqcCT74IoUuTg_0[29].kind = 2; TM__LEa0rTUoGHqcCT74IoUuTg_0[29].sons = &TM__LEa0rTUoGHqcCT74IoUuTg_3_27[0];
-NTI__XYDt7D1G3qcClFyZy1Ky9ag_.node = &TM__LEa0rTUoGHqcCT74IoUuTg_0[29];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[30].len = 28; TM__LEa0rTUoGHqcCT74IoUuTg_0[30].kind = 2; TM__LEa0rTUoGHqcCT74IoUuTg_0[30].sons = &TM__LEa0rTUoGHqcCT74IoUuTg_3_28[0];
+NTI__XYDt7D1G3qcClFyZy1Ky9ag_.node = &TM__LEa0rTUoGHqcCT74IoUuTg_0[30];
 TM__LEa0rTUoGHqcCT74IoUuTg_0[1].kind = 1;
 TM__LEa0rTUoGHqcCT74IoUuTg_0[1].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, targetCPU);
 TM__LEa0rTUoGHqcCT74IoUuTg_0[1].typ = (&NTI__XYDt7D1G3qcClFyZy1Ky9ag_);
 TM__LEa0rTUoGHqcCT74IoUuTg_0[1].name = "targetCPU";
-TM__LEa0rTUoGHqcCT74IoUuTg_2_8[1] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[30];
-TM__LEa0rTUoGHqcCT74IoUuTg_0[30].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[30].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, hostCPU);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[30].typ = (&NTI__XYDt7D1G3qcClFyZy1Ky9ag_);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[30].name = "hostCPU";
-TM__LEa0rTUoGHqcCT74IoUuTg_2_8[2] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[31];
+TM__LEa0rTUoGHqcCT74IoUuTg_2_8[1] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[31];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[31].kind = 1;
+TM__LEa0rTUoGHqcCT74IoUuTg_0[31].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, hostCPU);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[31].typ = (&NTI__XYDt7D1G3qcClFyZy1Ky9ag_);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[31].name = "hostCPU";
+TM__LEa0rTUoGHqcCT74IoUuTg_2_8[2] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[32];
 NTI__s7Mlr1t66SUqP6BKJMXLaQ_.size = sizeof(tyEnum_TSystemOS__s7Mlr1t66SUqP6BKJMXLaQ);
 NTI__s7Mlr1t66SUqP6BKJMXLaQ_.kind = 14;
 NTI__s7Mlr1t66SUqP6BKJMXLaQ_.base = 0;
 NTI__s7Mlr1t66SUqP6BKJMXLaQ_.flags = 3;
 for (TM__LEa0rTUoGHqcCT74IoUuTg_8 = 0; TM__LEa0rTUoGHqcCT74IoUuTg_8 < 32; TM__LEa0rTUoGHqcCT74IoUuTg_8++) {
-TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+32].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+32].offset = TM__LEa0rTUoGHqcCT74IoUuTg_8;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+32].name = TM__LEa0rTUoGHqcCT74IoUuTg_7[TM__LEa0rTUoGHqcCT74IoUuTg_8];
-TM__LEa0rTUoGHqcCT74IoUuTg_6_32[TM__LEa0rTUoGHqcCT74IoUuTg_8] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+32];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+33].kind = 1;
+TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+33].offset = TM__LEa0rTUoGHqcCT74IoUuTg_8;
+TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+33].name = TM__LEa0rTUoGHqcCT74IoUuTg_7[TM__LEa0rTUoGHqcCT74IoUuTg_8];
+TM__LEa0rTUoGHqcCT74IoUuTg_6_32[TM__LEa0rTUoGHqcCT74IoUuTg_8] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[TM__LEa0rTUoGHqcCT74IoUuTg_8+33];
 }
-TM__LEa0rTUoGHqcCT74IoUuTg_0[64].len = 32; TM__LEa0rTUoGHqcCT74IoUuTg_0[64].kind = 2; TM__LEa0rTUoGHqcCT74IoUuTg_0[64].sons = &TM__LEa0rTUoGHqcCT74IoUuTg_6_32[0];
-NTI__s7Mlr1t66SUqP6BKJMXLaQ_.node = &TM__LEa0rTUoGHqcCT74IoUuTg_0[64];
-TM__LEa0rTUoGHqcCT74IoUuTg_0[31].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[31].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, targetOS);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[31].typ = (&NTI__s7Mlr1t66SUqP6BKJMXLaQ_);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[31].name = "targetOS";
-TM__LEa0rTUoGHqcCT74IoUuTg_2_8[3] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[65];
-TM__LEa0rTUoGHqcCT74IoUuTg_0[65].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[65].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, hostOS);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[65].typ = (&NTI__s7Mlr1t66SUqP6BKJMXLaQ_);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[65].name = "hostOS";
-TM__LEa0rTUoGHqcCT74IoUuTg_2_8[4] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[66];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[65].len = 32; TM__LEa0rTUoGHqcCT74IoUuTg_0[65].kind = 2; TM__LEa0rTUoGHqcCT74IoUuTg_0[65].sons = &TM__LEa0rTUoGHqcCT74IoUuTg_6_32[0]; 
+NTI__s7Mlr1t66SUqP6BKJMXLaQ_.node = &TM__LEa0rTUoGHqcCT74IoUuTg_0[65]; 
+TM__LEa0rTUoGHqcCT74IoUuTg_0[32].kind = 1; 
+TM__LEa0rTUoGHqcCT74IoUuTg_0[32].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, targetOS); 
+TM__LEa0rTUoGHqcCT74IoUuTg_0[32].typ = (&NTI__s7Mlr1t66SUqP6BKJMXLaQ_); 
+TM__LEa0rTUoGHqcCT74IoUuTg_0[32].name = "targetOS";
+TM__LEa0rTUoGHqcCT74IoUuTg_2_8[3] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[66];
 TM__LEa0rTUoGHqcCT74IoUuTg_0[66].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[66].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, intSize);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[66].typ = (&NTI__rR5Bzr1D5krxoo1NcNyeMA_);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[66].name = "intSize";
-TM__LEa0rTUoGHqcCT74IoUuTg_2_8[5] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[67];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[66].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, hostOS);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[66].typ = (&NTI__s7Mlr1t66SUqP6BKJMXLaQ_);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[66].name = "hostOS";
+TM__LEa0rTUoGHqcCT74IoUuTg_2_8[4] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[67];
 TM__LEa0rTUoGHqcCT74IoUuTg_0[67].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[67].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, floatSize);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[67].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, intSize);
 TM__LEa0rTUoGHqcCT74IoUuTg_0[67].typ = (&NTI__rR5Bzr1D5krxoo1NcNyeMA_);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[67].name = "floatSize";
-TM__LEa0rTUoGHqcCT74IoUuTg_2_8[6] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[68];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[67].name = "intSize";
+TM__LEa0rTUoGHqcCT74IoUuTg_2_8[5] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[68];
 TM__LEa0rTUoGHqcCT74IoUuTg_0[68].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[68].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, ptrSize);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[68].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, floatSize);
 TM__LEa0rTUoGHqcCT74IoUuTg_0[68].typ = (&NTI__rR5Bzr1D5krxoo1NcNyeMA_);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[68].name = "ptrSize";
-TM__LEa0rTUoGHqcCT74IoUuTg_2_8[7] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[69];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[68].name = "floatSize";
+TM__LEa0rTUoGHqcCT74IoUuTg_2_8[6] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[69];
 TM__LEa0rTUoGHqcCT74IoUuTg_0[69].kind = 1;
-TM__LEa0rTUoGHqcCT74IoUuTg_0[69].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, tnl);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[69].typ = (&NTI__77mFvmsOLKik79ci2hXkHEg_);
-TM__LEa0rTUoGHqcCT74IoUuTg_0[69].name = "tnl";
+TM__LEa0rTUoGHqcCT74IoUuTg_0[69].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, ptrSize);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[69].typ = (&NTI__rR5Bzr1D5krxoo1NcNyeMA_);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[69].name = "ptrSize";
+TM__LEa0rTUoGHqcCT74IoUuTg_2_8[7] = &TM__LEa0rTUoGHqcCT74IoUuTg_0[70];
+TM__LEa0rTUoGHqcCT74IoUuTg_0[70].kind = 1;
+TM__LEa0rTUoGHqcCT74IoUuTg_0[70].offset = offsetof(tyObject_Target__9abOl5DLX8suLujOaHSvGzw, tnl);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[70].typ = (&NTI__77mFvmsOLKik79ci2hXkHEg_);
+TM__LEa0rTUoGHqcCT74IoUuTg_0[70].name = "tnl";
 TM__LEa0rTUoGHqcCT74IoUuTg_0[0].len = 8; TM__LEa0rTUoGHqcCT74IoUuTg_0[0].kind = 2; TM__LEa0rTUoGHqcCT74IoUuTg_0[0].sons = &TM__LEa0rTUoGHqcCT74IoUuTg_2_8[0];
 NTI__9abOl5DLX8suLujOaHSvGzw_.node = &TM__LEa0rTUoGHqcCT74IoUuTg_0[0];
 }

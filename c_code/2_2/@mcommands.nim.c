@@ -407,7 +407,7 @@ NI Field1;
 tyEnum_TEndian__bQ3yFYQJojZPNYsZnS7Zjg Field2;
 NI Field3;
 NI Field4;
-};
+typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[27];
 typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[26];
 typedef NU8 tyEnum_Feature__01UoAKYz1MxZiuG1X2VhNQ;
 typedef NU8 tyEnum_LegacyFeature__hGCD9aOrxPvpXn4Ne6W6OVA;

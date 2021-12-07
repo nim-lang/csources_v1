@@ -193,6 +193,8 @@ case $ucpu in
     mycpu="arm" ;;
   *riscv64* )
     mycpu="riscv64" ;;
+  *loongarch64* )
+    mycpu="loongarch64" ;;
   *)
     echo 2>&1 "Error: unknown processor: $ucpu"
     exit 1
@@ -5971,6 +5973,282 @@ c_code/2_2/@mropes.nim.o \
 c_code/2_4/stdlib_tables.nim.o \
 c_code/2_4/@mlineinfos.nim.o \
 c_code/2_19/@mplatform.nim.o \
+c_code/1_2/@mprefixmatches.nim.o \
+c_code/2_4/stdlib_strformat.nim.o \
+c_code/2_2/stdlib_terminal.nim.o \
+c_code/2_4/@moptions.nim.o \
+c_code/2_4/@mmsgs.nim.o \
+c_code/1_2/@mcondsyms.nim.o \
+c_code/2_4/stdlib_streams.nim.o \
+c_code/2_4/stdlib_cpuinfo.nim.o \
+c_code/2_4/stdlib_osproc.nim.o \
+c_code/2_4/stdlib_sha1.nim.o \
+c_code/2_2/stdlib_lexbase.nim.o \
+c_code/2_4/stdlib_parsejson.nim.o \
+c_code/2_4/stdlib_json.nim.o \
+c_code/2_4/@mextccomp.nim.o \
+c_code/1_2/@mwordrecg.nim.o \
+c_code/2_4/@mnimblecmd.nim.o \
+c_code/2_4/stdlib_parseopt.nim.o \
+c_code/1_2/@mincremental.nim.o \
+c_code/2_4/@mcommands.nim.o \
+c_code/2_2/@mllstream.nim.o \
+c_code/1_2/@midents.nim.o \
+c_code/1_2/@midgen.nim.o \
+c_code/1_2/@mint128.nim.o \
+c_code/1_2/@mast.nim.o \
+c_code/1_2/@mnimlexbase.nim.o \
+c_code/2_4/@mlexer.nim.o \
+c_code/2_4/@mparser.nim.o \
+c_code/1_2/@mrenderer.nim.o \
+c_code/1_2/@mfilters.nim.o \
+c_code/1_2/@mfilter_tmpl.nim.o \
+c_code/1_2/@msyntaxes.nim.o \
+c_code/1_2/stdlib_intsets.nim.o \
+c_code/2_4/@mrodutils.nim.o \
+c_code/2_4/@mastalgo.nim.o \
+c_code/1_2/@mtrees.nim.o \
+c_code/2_4/@mtypes.nim.o \
+c_code/1_2/@mbtrees.nim.o \
+c_code/1_2/stdlib_md5.nim.o \
+c_code/1_2/@mmodulegraphs.nim.o \
+c_code/1_2/@mmagicsys.nim.o \
+c_code/1_2/@mbitsets.nim.o \
+c_code/1_2/@mnimsets.nim.o \
+c_code/2_4/@msemfold.nim.o \
+c_code/1_2/@mmodulepaths.nim.o \
+c_code/1_2/@mvmdef.nim.o \
+c_code/2_4/@msemdata.nim.o \
+c_code/1_2/@mlinter.nim.o \
+c_code/1_2/@mnimfix@sprettybase.nim.o \
+c_code/1_2/@mlookups.nim.o \
+c_code/2_4/@msemtypinst.nim.o \
+c_code/1_2/@mparampatterns.nim.o \
+c_code/1_2/@mlowerings.nim.o \
+c_code/1_2/@m..@slib@spackages@sdocutils@srstast.nim.o \
+c_code/2_4/@m..@slib@spackages@sdocutils@srst.nim.o \
+c_code/1_2/@m..@slib@spackages@sdocutils@shighlite.nim.o \
+c_code/2_4/@m..@slib@spackages@sdocutils@srstgen.nim.o \
+c_code/1_2/stdlib_xmltree.nim.o \
+c_code/1_2/stdlib_uri.nim.o \
+c_code/1_2/stdlib_cgi.nim.o \
+c_code/1_2/@mtypesrenderer.nim.o \
+c_code/2_4/@mdocgen.nim.o \
+c_code/2_4/@msigmatch.nim.o \
+c_code/1_2/@mimporter.nim.o \
+c_code/1_2/@mprocfind.nim.o \
+c_code/2_4/@mpragmas.nim.o \
+c_code/2_4/@mreorder.nim.o \
+c_code/1_2/@mpasses.nim.o \
+c_code/1_2/@msaturate.nim.o \
+c_code/1_2/@mguards.nim.o \
+c_code/2_4/@msighashes.nim.o \
+c_code/2_4/@mliftdestructors.nim.o \
+c_code/1_2/@msempass2.nim.o \
+c_code/1_2/@mcgmeth.nim.o \
+c_code/1_2/@maliases.nim.o \
+c_code/1_2/@mpatterns.nim.o \
+c_code/2_4/@mdfa.nim.o \
+c_code/2_4/@minjectdestructors.nim.o \
+c_code/1_2/@mliftlocals.nim.o \
+c_code/1_2/@mlambdalifting.nim.o \
+c_code/1_2/@mclosureiters.nim.o \
+c_code/1_2/@mtransf.nim.o \
+c_code/1_2/@mvmgen.nim.o \
+c_code/2_4/@mvmdeps.nim.o \
+c_code/1_2/@mvmmarshal.nim.o \
+c_code/2_4/@mgorgeimpl.nim.o \
+c_code/1_2/@mmacrocacheimpl.nim.o \
+c_code/2_4/@mevaltempl.nim.o \
+c_code/2_4/@mvm.nim.o \
+c_code/1_2/@msemmacrosanity.nim.o \
+c_code/1_2/@mpluginsupport.nim.o \
+c_code/1_2/@mplugins@slocals.nim.o \
+c_code/1_2/@mplugins@sitersgen.nim.o \
+c_code/1_2/@mplugins@sactive.nim.o \
+c_code/1_2/@mspawn.nim.o \
+c_code/1_2/@msemparallel.nim.o \
+c_code/2_4/@msem.nim.o \
+c_code/1_2/@mccgutils.nim.o \
+c_code/1_2/@mtreetab.nim.o \
+c_code/1_2/@mndi.nim.o \
+c_code/1_2/@mcgendata.nim.o \
+c_code/2_4/@mccgmerge.nim.o \
+c_code/1_2/@menumtostr.nim.o \
+c_code/2_2/stdlib_dynlib.nim.o \
+c_code/2_4/@mcgen.nim.o \
+c_code/2_4/@mnimconf.nim.o \
+c_code/1_2/@mpassaux.nim.o \
+c_code/1_2/@mdepends.nim.o \
+c_code/1_2/@mmodules.nim.o \
+c_code/1_2/@mjsgen.nim.o \
+c_code/1_2/@mdocgen2.nim.o \
+c_code/1_2/@mmain.nim.o \
+c_code/2_4/@mscriptconfig.nim.o \
+c_code/2_4/@mcmdlinehelper.nim.o \
+c_code/2_2/@mnim.nim.o $LINK_FLAGS
+    ;;
+  loongarch64)
+    set -x
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_assertions.nim.c -o c_code/1_2/stdlib_assertions.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_dollars.nim.c -o c_code/1_2/stdlib_dollars.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_formatfloat.nim.c -o c_code/1_2/stdlib_formatfloat.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_io.nim.c -o c_code/2_4/stdlib_io.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_system.nim.c -o c_code/2_4/stdlib_system.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/stdlib_parseutils.nim.c -o c_code/2_2/stdlib_parseutils.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/stdlib_math.nim.c -o c_code/2_2/stdlib_math.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_algorithm.nim.c -o c_code/1_2/stdlib_algorithm.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/stdlib_unicode.nim.c -o c_code/2_2/stdlib_unicode.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_strutils.nim.c -o c_code/2_4/stdlib_strutils.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/stdlib_pathnorm.nim.c -o c_code/2_2/stdlib_pathnorm.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_posix.nim.c -o c_code/2_4/stdlib_posix.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_times.nim.c -o c_code/2_4/stdlib_times.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_os.nim.c -o c_code/2_4/stdlib_os.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_hashes.nim.c -o c_code/1_2/stdlib_hashes.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_strtabs.nim.c -o c_code/2_4/stdlib_strtabs.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_sets.nim.c -o c_code/1_2/stdlib_sets.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/@mpathutils.nim.c -o c_code/2_2/@mpathutils.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/@mropes.nim.c -o c_code/2_2/@mropes.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_tables.nim.c -o c_code/2_4/stdlib_tables.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mlineinfos.nim.c -o c_code/2_4/@mlineinfos.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_20/@mplatform.nim.c -o c_code/2_20/@mplatform.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mprefixmatches.nim.c -o c_code/1_2/@mprefixmatches.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_strformat.nim.c -o c_code/2_4/stdlib_strformat.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/stdlib_terminal.nim.c -o c_code/2_2/stdlib_terminal.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@moptions.nim.c -o c_code/2_4/@moptions.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mmsgs.nim.c -o c_code/2_4/@mmsgs.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mcondsyms.nim.c -o c_code/1_2/@mcondsyms.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_streams.nim.c -o c_code/2_4/stdlib_streams.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_cpuinfo.nim.c -o c_code/2_4/stdlib_cpuinfo.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_osproc.nim.c -o c_code/2_4/stdlib_osproc.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_sha1.nim.c -o c_code/2_4/stdlib_sha1.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/stdlib_lexbase.nim.c -o c_code/2_2/stdlib_lexbase.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_parsejson.nim.c -o c_code/2_4/stdlib_parsejson.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_json.nim.c -o c_code/2_4/stdlib_json.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mextccomp.nim.c -o c_code/2_4/@mextccomp.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mwordrecg.nim.c -o c_code/1_2/@mwordrecg.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mnimblecmd.nim.c -o c_code/2_4/@mnimblecmd.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/stdlib_parseopt.nim.c -o c_code/2_4/stdlib_parseopt.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mincremental.nim.c -o c_code/1_2/@mincremental.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mcommands.nim.c -o c_code/2_4/@mcommands.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/@mllstream.nim.c -o c_code/2_2/@mllstream.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@midents.nim.c -o c_code/1_2/@midents.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@midgen.nim.c -o c_code/1_2/@midgen.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mint128.nim.c -o c_code/1_2/@mint128.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mast.nim.c -o c_code/1_2/@mast.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mnimlexbase.nim.c -o c_code/1_2/@mnimlexbase.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mlexer.nim.c -o c_code/2_4/@mlexer.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mparser.nim.c -o c_code/2_4/@mparser.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mrenderer.nim.c -o c_code/1_2/@mrenderer.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mfilters.nim.c -o c_code/1_2/@mfilters.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mfilter_tmpl.nim.c -o c_code/1_2/@mfilter_tmpl.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@msyntaxes.nim.c -o c_code/1_2/@msyntaxes.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_intsets.nim.c -o c_code/1_2/stdlib_intsets.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mrodutils.nim.c -o c_code/2_4/@mrodutils.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mastalgo.nim.c -o c_code/2_4/@mastalgo.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mtrees.nim.c -o c_code/1_2/@mtrees.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mtypes.nim.c -o c_code/2_4/@mtypes.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mbtrees.nim.c -o c_code/1_2/@mbtrees.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_md5.nim.c -o c_code/1_2/stdlib_md5.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mmodulegraphs.nim.c -o c_code/1_2/@mmodulegraphs.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mmagicsys.nim.c -o c_code/1_2/@mmagicsys.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mbitsets.nim.c -o c_code/1_2/@mbitsets.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mnimsets.nim.c -o c_code/1_2/@mnimsets.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@msemfold.nim.c -o c_code/2_4/@msemfold.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mmodulepaths.nim.c -o c_code/1_2/@mmodulepaths.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mvmdef.nim.c -o c_code/1_2/@mvmdef.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@msemdata.nim.c -o c_code/2_4/@msemdata.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mlinter.nim.c -o c_code/1_2/@mlinter.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mnimfix@sprettybase.nim.c -o c_code/1_2/@mnimfix@sprettybase.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mlookups.nim.c -o c_code/1_2/@mlookups.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@msemtypinst.nim.c -o c_code/2_4/@msemtypinst.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mparampatterns.nim.c -o c_code/1_2/@mparampatterns.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mlowerings.nim.c -o c_code/1_2/@mlowerings.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@m..@slib@spackages@sdocutils@srstast.nim.c -o c_code/1_2/@m..@slib@spackages@sdocutils@srstast.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@m..@slib@spackages@sdocutils@srst.nim.c -o c_code/2_4/@m..@slib@spackages@sdocutils@srst.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@m..@slib@spackages@sdocutils@shighlite.nim.c -o c_code/1_2/@m..@slib@spackages@sdocutils@shighlite.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@m..@slib@spackages@sdocutils@srstgen.nim.c -o c_code/2_4/@m..@slib@spackages@sdocutils@srstgen.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_xmltree.nim.c -o c_code/1_2/stdlib_xmltree.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_uri.nim.c -o c_code/1_2/stdlib_uri.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/stdlib_cgi.nim.c -o c_code/1_2/stdlib_cgi.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mtypesrenderer.nim.c -o c_code/1_2/@mtypesrenderer.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mdocgen.nim.c -o c_code/2_4/@mdocgen.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@msigmatch.nim.c -o c_code/2_4/@msigmatch.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mimporter.nim.c -o c_code/1_2/@mimporter.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mprocfind.nim.c -o c_code/1_2/@mprocfind.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mpragmas.nim.c -o c_code/2_4/@mpragmas.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mreorder.nim.c -o c_code/2_4/@mreorder.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mpasses.nim.c -o c_code/1_2/@mpasses.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@msaturate.nim.c -o c_code/1_2/@msaturate.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mguards.nim.c -o c_code/1_2/@mguards.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@msighashes.nim.c -o c_code/2_4/@msighashes.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mliftdestructors.nim.c -o c_code/2_4/@mliftdestructors.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@msempass2.nim.c -o c_code/1_2/@msempass2.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mcgmeth.nim.c -o c_code/1_2/@mcgmeth.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@maliases.nim.c -o c_code/1_2/@maliases.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mpatterns.nim.c -o c_code/1_2/@mpatterns.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mdfa.nim.c -o c_code/2_4/@mdfa.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@minjectdestructors.nim.c -o c_code/2_4/@minjectdestructors.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mliftlocals.nim.c -o c_code/1_2/@mliftlocals.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mlambdalifting.nim.c -o c_code/1_2/@mlambdalifting.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mclosureiters.nim.c -o c_code/1_2/@mclosureiters.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mtransf.nim.c -o c_code/1_2/@mtransf.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mvmgen.nim.c -o c_code/1_2/@mvmgen.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mvmdeps.nim.c -o c_code/2_4/@mvmdeps.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mvmmarshal.nim.c -o c_code/1_2/@mvmmarshal.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mgorgeimpl.nim.c -o c_code/2_4/@mgorgeimpl.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mmacrocacheimpl.nim.c -o c_code/1_2/@mmacrocacheimpl.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mevaltempl.nim.c -o c_code/2_4/@mevaltempl.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mvm.nim.c -o c_code/2_4/@mvm.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@msemmacrosanity.nim.c -o c_code/1_2/@msemmacrosanity.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mpluginsupport.nim.c -o c_code/1_2/@mpluginsupport.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mplugins@slocals.nim.c -o c_code/1_2/@mplugins@slocals.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mplugins@sitersgen.nim.c -o c_code/1_2/@mplugins@sitersgen.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mplugins@sactive.nim.c -o c_code/1_2/@mplugins@sactive.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mspawn.nim.c -o c_code/1_2/@mspawn.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@msemparallel.nim.c -o c_code/1_2/@msemparallel.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@msem.nim.c -o c_code/2_4/@msem.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mccgutils.nim.c -o c_code/1_2/@mccgutils.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mtreetab.nim.c -o c_code/1_2/@mtreetab.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mndi.nim.c -o c_code/1_2/@mndi.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mcgendata.nim.c -o c_code/1_2/@mcgendata.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mccgmerge.nim.c -o c_code/2_4/@mccgmerge.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@menumtostr.nim.c -o c_code/1_2/@menumtostr.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/stdlib_dynlib.nim.c -o c_code/2_2/stdlib_dynlib.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mcgen.nim.c -o c_code/2_4/@mcgen.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mnimconf.nim.c -o c_code/2_4/@mnimconf.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mpassaux.nim.c -o c_code/1_2/@mpassaux.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mdepends.nim.c -o c_code/1_2/@mdepends.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mmodules.nim.c -o c_code/1_2/@mmodules.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mjsgen.nim.c -o c_code/1_2/@mjsgen.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mdocgen2.nim.c -o c_code/1_2/@mdocgen2.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/1_2/@mmain.nim.c -o c_code/1_2/@mmain.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mscriptconfig.nim.c -o c_code/2_4/@mscriptconfig.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_4/@mcmdlinehelper.nim.c -o c_code/2_4/@mcmdlinehelper.nim.o
+    $CC $COMP_FLAGS -Ic_code -c c_code/2_2/@mnim.nim.c -o c_code/2_2/@mnim.nim.o
+    $CC -o $binDir/nim  \
+c_code/1_2/stdlib_assertions.nim.o \
+c_code/1_2/stdlib_dollars.nim.o \
+c_code/1_2/stdlib_formatfloat.nim.o \
+c_code/2_4/stdlib_io.nim.o \
+c_code/2_4/stdlib_system.nim.o \
+c_code/2_2/stdlib_parseutils.nim.o \
+c_code/2_2/stdlib_math.nim.o \
+c_code/1_2/stdlib_algorithm.nim.o \
+c_code/2_2/stdlib_unicode.nim.o \
+c_code/2_4/stdlib_strutils.nim.o \
+c_code/2_2/stdlib_pathnorm.nim.o \
+c_code/2_4/stdlib_posix.nim.o \
+c_code/2_4/stdlib_times.nim.o \
+c_code/2_4/stdlib_os.nim.o \
+c_code/1_2/stdlib_hashes.nim.o \
+c_code/2_4/stdlib_strtabs.nim.o \
+c_code/1_2/stdlib_sets.nim.o \
+c_code/2_2/@mpathutils.nim.o \
+c_code/2_2/@mropes.nim.o \
+c_code/2_4/stdlib_tables.nim.o \
+c_code/2_4/@mlineinfos.nim.o \
+c_code/2_20/@mplatform.nim.o \
 c_code/1_2/@mprefixmatches.nim.o \
 c_code/2_4/stdlib_strformat.nim.o \
 c_code/2_2/stdlib_terminal.nim.o \

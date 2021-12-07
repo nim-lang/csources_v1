@@ -885,7 +885,7 @@ tyEnum_TEndian__bQ3yFYQJojZPNYsZnS7Zjg Field2;
 NI Field3;
 NI Field4;
 };
-typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[26];
+typedef tyTuple__UpiOGlu5Ux6DLM73wSrdpg tyArray__hsHGImvImZtnKKlj0Ycm2Q[27];
 typedef NimStringDesc* tyArray__sMpvt1sOxOJ3LFGulnbeMQ[4];
 typedef NimStringDesc* tyArray__Re75IspeoxXy2oCZHwcRrA[2];
 struct tyTuple__xDU9bZmv1ZbZkJDaATBekIQ {
