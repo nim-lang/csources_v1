@@ -103,7 +103,9 @@ case $uos in
     fi
     case $ucpu in
       *i386*|*amd64*|*aarch64*|*arm64*)
-        CC="clang"
+        CC="clang" ;;
+      *ppc*)
+        CC="gcc" ;;
     esac
     ;;
   *aix* )
