@@ -50,10 +50,27 @@ ifeq ($(uos),netbsd)
 endif
 ifeq ($(uos),darwin)
   myos = macosx
-  CC = clang
   LDFLAGS += -ldl -lm
   ifeq ($(HOSTTYPE),x86_64)
     ucpu = amd64
+  endif
+  ifeq ($(ucpu),i386)
+    CC = clang
+  endif
+  ifeq ($(ucpu),amd64)
+    CC = clang
+  endif
+  ifeq ($(ucpu),arm64)
+    CC = clang
+  endif
+  ifeq ($(ucpu),aarch64)
+    CC = clang
+  endif
+  ifeq ($(ucpu),ppc)
+    CC = gcc
+  endif
+  ifeq ($(ucpu),ppc64)
+    CC = gcc
   endif
 endif
 ifeq ($(uos),aix)
@@ -132,6 +149,14 @@ ifeq ($(ucpu),ppc64)
     CFLAGS += -m64
     LDFLAGS += -m64
   endif
+  ifeq ($(myos),freebsd)
+    CFLAGS += -m64
+    LDFLAGS += -m64
+  endif
+  ifeq ($(myos),macosx)
+    CFLAGS += -arch ppc64
+    LDFLAGS += -arch ppc64
+  endif
 endif
 ifeq ($(ucpu),powerpc)
   mycpu = powerpc
@@ -142,7 +167,11 @@ ifeq ($(ucpu),powerpc)
   endif
 endif
 ifeq ($(ucpu),ppc)
-  mycpu = ppc
+  mycpu = powerpc
+  ifeq ($(myos),macosx)
+    CFLAGS += -arch ppc
+    LDFLAGS += -arch ppc
+  endif
 endif
 ifneq (,$(filter $(ucpu), mips mips64))
   mycpu = $(shell /bin/sh -c '"$(CC)" -dumpmachine | sed "s/-.*//"')
@@ -343,7 +372,7 @@ ifeq ($(myos),macosx)
     oFiles =
   endif
   ifeq ($(mycpu),powerpc)
-    oFiles =
+    oFiles = c_code/1_1/stdlib_assertions.nim.o c_code/1_1/stdlib_dollars.nim.o c_code/1_1/stdlib_formatfloat.nim.o c_code/3_1/stdlib_io.nim.o c_code/3_1/stdlib_system.nim.o c_code/2_1/stdlib_parseutils.nim.o c_code/2_1/stdlib_math.nim.o c_code/1_1/stdlib_algorithm.nim.o c_code/2_1/stdlib_unicode.nim.o c_code/3_1/stdlib_strutils.nim.o c_code/2_1/stdlib_pathnorm.nim.o c_code/3_1/stdlib_posix.nim.o c_code/3_1/stdlib_times.nim.o c_code/3_1/stdlib_os.nim.o c_code/1_1/stdlib_hashes.nim.o c_code/2_1/stdlib_strtabs.nim.o c_code/1_1/stdlib_sets.nim.o c_code/2_1/@mpathutils.nim.o c_code/2_1/@mropes.nim.o c_code/3_1/stdlib_tables.nim.o c_code/2_1/@mlineinfos.nim.o c_code/3_7/@mplatform.nim.o c_code/1_1/@mprefixmatches.nim.o c_code/2_1/stdlib_strformat.nim.o c_code/2_1/stdlib_terminal.nim.o c_code/3_1/@moptions.nim.o c_code/3_1/@mmsgs.nim.o c_code/1_1/@mcondsyms.nim.o c_code/3_1/stdlib_streams.nim.o c_code/3_1/stdlib_cpuinfo.nim.o c_code/3_1/stdlib_osproc.nim.o c_code/2_3/stdlib_sha1.nim.o c_code/2_1/stdlib_lexbase.nim.o c_code/3_1/stdlib_parsejson.nim.o c_code/3_1/stdlib_json.nim.o c_code/3_1/@mextccomp.nim.o c_code/1_1/@mwordrecg.nim.o c_code/3_1/@mnimblecmd.nim.o c_code/2_3/stdlib_parseopt.nim.o c_code/1_1/@mincremental.nim.o c_code/3_1/@mcommands.nim.o c_code/2_1/@mllstream.nim.o c_code/1_1/@midents.nim.o c_code/1_1/@midgen.nim.o c_code/1_1/@mint128.nim.o c_code/1_1/@mast.nim.o c_code/1_1/@mnimlexbase.nim.o c_code/3_1/@mlexer.nim.o c_code/3_1/@mparser.nim.o c_code/1_1/@mrenderer.nim.o c_code/1_1/@mfilters.nim.o c_code/1_1/@mfilter_tmpl.nim.o c_code/1_1/@msyntaxes.nim.o c_code/1_1/stdlib_intsets.nim.o c_code/3_1/@mrodutils.nim.o c_code/3_1/@mastalgo.nim.o c_code/1_1/@mtrees.nim.o c_code/3_1/@mtypes.nim.o c_code/1_1/@mbtrees.nim.o c_code/1_1/stdlib_md5.nim.o c_code/1_1/@mmodulegraphs.nim.o c_code/1_1/@mmagicsys.nim.o c_code/1_1/@mbitsets.nim.o c_code/1_1/@mnimsets.nim.o c_code/3_1/@msemfold.nim.o c_code/3_1/@mmodulepaths.nim.o c_code/1_1/@mvmdef.nim.o c_code/3_1/@msemdata.nim.o c_code/1_1/@mlinter.nim.o c_code/1_1/@mnimfix@sprettybase.nim.o c_code/1_1/@mlookups.nim.o c_code/3_1/@msemtypinst.nim.o c_code/1_1/@mparampatterns.nim.o c_code/1_1/@mlowerings.nim.o c_code/1_1/@m..@slib@spackages@sdocutils@srstast.nim.o c_code/3_1/@m..@slib@spackages@sdocutils@srst.nim.o c_code/1_1/@m..@slib@spackages@sdocutils@shighlite.nim.o c_code/3_1/@m..@slib@spackages@sdocutils@srstgen.nim.o c_code/1_1/stdlib_xmltree.nim.o c_code/1_1/stdlib_uri.nim.o c_code/1_1/stdlib_cgi.nim.o c_code/1_1/@mtypesrenderer.nim.o c_code/3_1/@mdocgen.nim.o c_code/3_1/@msigmatch.nim.o c_code/1_1/@mimporter.nim.o c_code/1_1/@mprocfind.nim.o c_code/3_1/@mpragmas.nim.o c_code/3_1/@mreorder.nim.o c_code/1_1/@mpasses.nim.o c_code/1_1/@msaturate.nim.o c_code/1_1/@mguards.nim.o c_code/3_1/@msighashes.nim.o c_code/3_1/@mliftdestructors.nim.o c_code/1_1/@msempass2.nim.o c_code/1_1/@mcgmeth.nim.o c_code/1_1/@maliases.nim.o c_code/1_1/@mpatterns.nim.o c_code/3_1/@mdfa.nim.o c_code/3_1/@minjectdestructors.nim.o c_code/1_1/@mliftlocals.nim.o c_code/1_1/@mlambdalifting.nim.o c_code/1_1/@mclosureiters.nim.o c_code/1_1/@mtransf.nim.o c_code/1_1/@mvmgen.nim.o c_code/3_1/@mvmdeps.nim.o c_code/1_1/@mvmmarshal.nim.o c_code/3_1/@mgorgeimpl.nim.o c_code/1_1/@mmacrocacheimpl.nim.o c_code/3_1/@mevaltempl.nim.o c_code/3_1/@mvm.nim.o c_code/1_1/@msemmacrosanity.nim.o c_code/1_1/@mpluginsupport.nim.o c_code/1_1/@mplugins@slocals.nim.o c_code/1_1/@mplugins@sitersgen.nim.o c_code/1_1/@mplugins@sactive.nim.o c_code/1_1/@mspawn.nim.o c_code/1_1/@msemparallel.nim.o c_code/3_1/@msem.nim.o c_code/1_1/@mccgutils.nim.o c_code/1_1/@mtreetab.nim.o c_code/1_1/@mndi.nim.o c_code/1_1/@mcgendata.nim.o c_code/3_1/@mccgmerge.nim.o c_code/1_1/@menumtostr.nim.o c_code/2_1/stdlib_dynlib.nim.o c_code/3_1/@mcgen.nim.o c_code/3_1/@mnimconf.nim.o c_code/1_1/@mpassaux.nim.o c_code/1_1/@mdepends.nim.o c_code/1_1/@mmodules.nim.o c_code/1_1/@mjsgen.nim.o c_code/3_1/@mdocgen2.nim.o c_code/1_1/@mmain.nim.o c_code/3_1/@mscriptconfig.nim.o c_code/3_1/@mcmdlinehelper.nim.o c_code/3_1/@mnim.nim.o
   endif
   ifeq ($(mycpu),powerpc64el)
     oFiles =

@@ -33,6 +33,13 @@
 #undef unix
 #define nimfr_(x, y)
 #define nimln_(x, y)
+
+#ifdef __APPLE__
+#ifndef st_mtim
+#define st_mtim st_mtimespec
+#endif
+#endif
+
 typedef struct tySequence__sM4lkSb7zS6F7OVMvW9cffQ tySequence__sM4lkSb7zS6F7OVMvW9cffQ;
 typedef struct TGenericSeq TGenericSeq;
 typedef struct NimStringDesc NimStringDesc;
